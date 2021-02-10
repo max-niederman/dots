@@ -1,4 +1,4 @@
-function vim --description "Open Neovim-qt in the directory specified"
+function vim --description "Open Neovim directory specified"
     if test -n "$argv"
         and [ -d $argv[1] ]
 
