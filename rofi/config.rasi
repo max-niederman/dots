@@ -1,0 +1,9 @@
+configuration {
+    modi: "window,run,drun,ssh,combi";
+    combi-modi: "window,drun";
+	  theme: "./wal.rasi";
+    show-icons: true;
+    font: "FiraCode Nerd Font 14";
+}
+
+/* vim:ft=css
