@@ -1,5 +1,5 @@
 configuration {
-    modi: "window,run,drun,ssh,combi";
+    modi: "window,run,drun,ssh,emoji,combi";
     combi-modi: "window,drun";
 	  theme: "./wal.rasi";
     show-icons: true;

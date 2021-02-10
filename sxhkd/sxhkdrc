@@ -16,6 +16,11 @@ alt + @space
 alt + Tab
     rofi -show window
 
+# emoji selector
+
+super + p
+    rofi -show emoji
+
 # make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd

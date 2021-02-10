@@ -1,2 +1,2 @@
 watch:
-	polybar -r --log=info primary
+	polybar -r primary
