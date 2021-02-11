@@ -8,18 +8,19 @@ super + Return
 
 # program launcher
 super + @space
-	rofi -show drun
+	$HOME/.config/rofi/scripts/launcher.sh
 
-alt + @space
-    rofi -show combi
-
+# window switcher
 alt + Tab
     rofi -show window
 
 # emoji selector
-
 super + p
     rofi -show emoji
+
+# take a screenshot
+Print
+    flameshot gui
 
 # make sxhkd reload its configuration files:
 super + Escape

@@ -2,8 +2,14 @@ function walu --description "Wrapper over wal with scripts to update application
      wal $argv
 
      echo "Updating user themes:"
-     sh $HOME/.config/bspwm/bspwmrc && echo "Updated WM colors."
+     sh $HOME/.config/polybar/scripts/pywal.sh && echo "Updated polybar theme."
+     sh $HOME/.config/rofi/scripts/pywal.sh && echo "Updated rofi theme."
+     daemonize $HOME/.config/bspwm/bspwmrc && echo "Reloading WM and children in the background."
+
      pywalfox update && echo "Updated Firefox theme."
-     sh $HOME/scripts/wal-discord-update.sh
-     daemonize $HOME/scripts/wal-gtk-update.sh && echo "Starting GTK+ theme compilation in the background."
+
+     set -l scripts $HOME/.config/wal/scripts
+     sh $scripts/update-discord.sh
+     daemonize $scripts/update-gtk.sh \
+        && echo "Started GTK+ theme compilation in the background."
 end
