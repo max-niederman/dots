@@ -1,2 +1,0 @@
-watch:
-	polybar -r primary
