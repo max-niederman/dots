@@ -4,10 +4,10 @@
 pgrep -x sxhkd > /dev/null || sxhkd &
 
 # Start dunst
-$HOME/.config/dunst/start.sh
+$HOME/.config/dunst/start.sh &
 
 # Start polybar
-$HOME/.config/polybar/launch.sh
+$HOME/.config/polybar/launch.sh &
 
 # Assign displays
 bspc monitor DisplayPort-2 -d		I III V
