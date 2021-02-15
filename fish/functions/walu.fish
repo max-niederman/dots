@@ -5,11 +5,7 @@ function walu --description "Wrapper over wal with scripts to update application
      sh $HOME/.config/polybar/scripts/pywal.sh && echo "Updated polybar theme."
      sh $HOME/.config/rofi/scripts/pywal.sh && echo "Updated rofi theme."
      daemonize $HOME/.config/bspwm/bspwmrc && echo "Reloading WM and children in the background."
-
      pywalfox update && echo "Updated Firefox theme."
-
-     set -l scripts $HOME/.config/wal/scripts
-     sh $scripts/update-discord.sh
-     daemonize $scripts/update-gtk.sh \
+     daemonize $HOME/.config/wal/scripts/update-gtk.sh \
         && echo "Started GTK+ theme compilation in the background."
 end

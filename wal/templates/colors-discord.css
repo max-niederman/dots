@@ -1,0 +1,44 @@
+:root {{
+  --header-primary: {foreground};
+  --header-secondary: {color7};
+  --text-normal: {foreground};
+  --text-muted: {color8};
+  --text-link: {color5};
+  --channels-default: {color8};
+  --interactive-normal: {color1};
+  --interactive-hover: {color1};
+  --interactive-active: {foreground};
+  --interactive-muted: {color8};
+  --background-primary: {background};
+  --background-secondary: var(--background-primary);
+  --background-secondary-alt: var(--background-secondary);
+  --background-tertiary: var(--background-primary);
+  --background-accent: var(--background-primary);
+  --background-floating: var(--background-primary);
+  --activity-card-background: var(--background-primary);
+  --scrollbar-thin-thumb: {color8};
+  --scrollbar-thin-track: transparent;
+  --scrollbar-auto-thumb: {color8};
+  --scrollbar-auto-track: transparent;
+  --logo-primary: {foreground};
+  --focus-primary: {color5};
+  --radio-group-dot-foreground: {color6};
+  --channeltextarea-background: {foreground};
+  --textbox-markdown-syntax: {color6};
+}}
+
+/* Message Textarea */
+.slateTextArea-1Mkdgw {{
+    color: {background};
+}}
+
+/* Friends List */
+.peopleColumn-29fq28 {{
+    background-color: {background};
+}}
+
+.channelTextArea-rNsIhG .button-38aScr {{
+    --interactive-normal: {background};
+    --interactive-hover: {color6};
+    --interactive-active: {color6};
+}}
