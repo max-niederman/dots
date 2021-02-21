@@ -8,7 +8,7 @@ Plug 'sheerun/vim-polyglot' " Language integration pack
 Plug 'neoclide/coc.nvim', {'branch': 'release'} " Completions engine
 Plug 'lervag/vimtex' " LaTeX suport
 Plug 'scrooloose/syntastic' " Syntax checking
-Plug 'prettier/vim-prettier', { 'do': 'yarn install' } " Prettier integration
+Plug 'sbdchd/neoformat' "Syntax formatting
 
 " Functionalities
 Plug 'tpope/vim-repeat' " Enable repeating plugin maps with '.'
@@ -63,8 +63,8 @@ let g:neovide_cursor_trail_length=0.5
 let g:neovide_cursor_vfx_mode = 'pixiedust'
 
 " Language Providers
-let g:python_host_prog = '/home/max/.asdf/shims/python2'
-let g:python3_host_prog = '/home/max/.asdf/shims/python3'
+let g:python_host_prog = '~/.asdf/shims/python2'
+let g:python3_host_prog = '~/.asdf/shims/python3'
 
 """ Plugin Configurations & Bindings
 
@@ -101,20 +101,21 @@ function! s:CloseTexViewers()
     endif
 endfunction
 
-autocmd BufUnload *.tex VimtexClean
-autocmd User VimtexEventQuit call s:CloseTexViewers()
+au BufUnload *.tex VimtexClean
+au User VimtexEventQuit call s:CloseTexViewers()
 
-" Vim-prettier
-let g:prettier#autoformat = 1
-let g:prettier#autoformat_require_pragma = 0
-let g:prettier#quickfix_enabled = 0
+" Neoformat
+let g:neoformat_try_formatprg = 1
+let g:neoformat_basic_format_align = 1
+let g:neoformat_basic_format_trim = 1
+let g:neoformat_only_msg_on_error = 1
 
-"" Use Prettier's defaults
-let g:prettier#config#tab_width = 2
-let g:prettier#config#use_tabs = 'false'
-let g:prettier#config#print_width = 80
-
-autocmd BufWritePre *.svelte PrettierAsync
+augroup neoformat
+    au!
+    "au BufWritePre *.{js,ts,jsx,tsx} Neoformat
+    "au BufWritePre *.{html,svelte} Neoformat
+    "au BufWritePre *.{css,scss,sass,less} Neoformat
+augroup END
 
 " NERDTree
 let NERDTreeShowHidden = 1
@@ -150,32 +151,34 @@ let g:firenvim_config = {
 nmap <silent> <leader>g :Goyo<CR>
 
 " Limelight
-autocmd! User GoyoEnter Limelight
-autocmd! User GoyoLeave Limelight!
+au! User GoyoEnter Limelight
+au! User GoyoLeave Limelight!
 
 """ Filetype-Specific Configurations
 
-" HTML, XML, Jinja
-autocmd FileType html setlocal shiftwidth=2 tabstop=2 softtabstop=2
-autocmd FileType css setlocal shiftwidth=2 tabstop=2 softtabstop=2
-autocmd FileType xml setlocal shiftwidth=2 tabstop=2 softtabstop=2
-autocmd FileType htmldjango setlocal shiftwidth=2 tabstop=2 softtabstop=2
-autocmd FileType htmldjango inoremap {{ {{  }}<left><left><left>
-autocmd FileType htmldjango inoremap {% {%  %}<left><left><left>
-autocmd FileType htmldjango inoremap {# {#  #}<left><left><left>
+" HTML, XML, Jinja, Svelte
+au FileType html setlocal shiftwidth=2 tabstop=2 softtabstop=2
+au FileType css setlocal shiftwidth=2 tabstop=2 softtabstop=2
+au FileType xml setlocal shiftwidth=2 tabstop=2 softtabstop=2
+au FileType svelte setlocal shiftwidth=2 tabstop=2 softtabstop=2
+au FileType htmldjango setlocal shiftwidth=2 tabstop=2 softtabstop=2
+au FileType htmldjango inoremap {{ {{  }}<left><left><left>
+au FileType htmldjango inoremap {% {%  %}<left><left><left>
+au FileType htmldjango inoremap {# {#  #}<left><left><left>
 
 " Markdown and Journal
-autocmd FileType markdown setlocal shiftwidth=2 tabstop=2 softtabstop=2
-autocmd FileType journal setlocal shiftwidth=2 tabstop=2 softtabstop=2
+au FileType markdown setlocal shiftwidth=2 tabstop=2 softtabstop=2
+au FileType journal setlocal shiftwidth=2 tabstop=2 softtabstop=2
 
 "" JavaScript and TypeScript
-autocmd FileType javascript setlocal shiftwidth=2 tabstop=2 softtabstop=2
-autocmd FileType javascriptreact setlocal shiftwidth=2 tabstop=2 softtabstop=2
-autocmd FileType typescript setlocal shiftwidth=2 tabstop=2 softtabstop=2
-autocmd FileType typescriptreact setlocal shiftwidth=2 tabstop=2 softtabstop=2
+au FileType javascript setlocal shiftwidth=2 tabstop=2 softtabstop=2
+au FileType javascriptreact setlocal shiftwidth=2 tabstop=2 softtabstop=2
+au FileType typescript setlocal shiftwidth=2 tabstop=2 softtabstop=2
+au FileType typescriptreact setlocal shiftwidth=2 tabstop=2 softtabstop=2
+au FileType json setlocal shiftwidth=2 tabstop=2 softtabstop=2
 
 " Firebase Rules
-autocmd BufCreate *.rules setlocal shiftwidth=2 tabstop=2 softtabstop=2
+au BufCreate *.rules setlocal shiftwidth=2 tabstop=2 softtabstop=2
 
 """ Mappings, Autocommands, and Functions
 
@@ -256,10 +259,10 @@ if count(s:parent_proc, 'neovide') > 0
     " Most GUI-specific options are set in ginit.vim
 
     " Running immediately after VimEnter prevents the terminal window from being resized for some reason
-    autocmd VimEnter * call timer_start(200, { -> s:InitSession() })
+    au VimEnter * call timer_start(200, { -> s:InitSession() })
 elseif count(s:parent_proc, 'firefox') > 0
     " Firenvim
 else 
     " All other parents, i.e. terminal emulators
-    autocmd VimEnter * call s:InitSession()
+    au VimEnter * call s:InitSession()
 endif
