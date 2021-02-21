@@ -32,9 +32,19 @@
     color: {background};
 }}
 
+/* Replies */
+.repliedMessage-VokQwo {{
+    --background-accent: {color4};
+}}
+
 /* Friends List */
 .peopleColumn-29fq28 {{
     background-color: {background};
+}}
+
+/* New Message Seperator */
+.isUnread-3Ef-o9 {{
+    border-color: {color1};
 }}
 
 .channelTextArea-rNsIhG .button-38aScr {{
