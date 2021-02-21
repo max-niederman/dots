@@ -4,11 +4,11 @@ piactl monitor connectionstate | while read -r state
 do
     case $state in
         "Connected")
-            echo " Active"
+            echo " Up"
             ;;
 
         "Disconnected")
-            echo " Inactive"
+            echo " Down"
             ;;
 
         *)
