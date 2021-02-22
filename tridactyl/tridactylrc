@@ -1,0 +1,14 @@
+" General Settings
+set configversion 2.0
+set newtab about:newtab
+set theme base16-dracula
+
+" DuckDuckGo
+bindurl duckduckgo.com f hint -Jc [class=result__a]
+bindurl duckduckgo.com F hint -Jbc [class=result__a]
+
+" Google
+bindurl google.com f hint -Jc #search div:not(.action-menu) > a
+bindurl google.com F hint -Jbc #search div:not(.action-menu) > a
+
+vim: set filetype=tridactyl
