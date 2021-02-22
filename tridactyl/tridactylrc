@@ -1,7 +1,10 @@
 " General Settings
 set configversion 2.0
 set newtab about:newtab
-set theme base16-dracula
+set searchengine duckduckgo
+
+" Theme
+set theme base16-wal
 
 " DuckDuckGo
 bindurl duckduckgo.com f hint -Jc [class=result__a]
