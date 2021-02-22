@@ -125,10 +125,7 @@ nmap <silent> <C-k> :NERDTreeToggle<CR>
 nmap <silent> <leader>r :NERDTreeRefresh<CR>
 
 " FZF
-nmap <leader>f :FZF<CR>
-
-" Neoterm
-tmap <Esc> <C-\><C-n>
+nmap <silent> <leader>f :FZF<CR>
 
 " Vim-test
 nmap <silent> <leader>tn :TestNearest<CR>
@@ -232,7 +229,7 @@ nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
-""" Session Initilization
+""" Session Initialization
 
 function! s:InitSession()
     " Open the terminal window
@@ -259,7 +256,7 @@ if count(s:parent_proc, 'neovide') > 0
     " Most GUI-specific options are set in ginit.vim
 
     " Running immediately after VimEnter prevents the terminal window from being resized for some reason
-    au VimEnter * call timer_start(200, { -> s:InitSession() })
+    au VimEnter * call s:InitSession()
 elseif count(s:parent_proc, 'firefox') > 0
     " Firenvim
 else 
