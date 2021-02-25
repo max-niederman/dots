@@ -10,6 +10,10 @@ super + Return
 super + @space
 	$HOME/.config/rofi/scripts/launcher.sh
 
+# alternate program launcher
+super + alt + @space
+    rofi -show drun
+
 # window switcher
 alt + Tab
     rofi -show window
