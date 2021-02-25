@@ -182,7 +182,6 @@ au BufCreate *.rules setlocal shiftwidth=2 tabstop=2 softtabstop=2
 " Clipboard
 vmap <C-c> "+y
 vmap <C-v> "+p
-imap <C-v> <C-o>"+p<CR>
 
 " Use tab to trigger completion with characters ahead and navigate
 inoremap <silent><expr> <TAB>
