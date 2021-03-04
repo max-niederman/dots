@@ -1,4 +1,7 @@
 :root {{
+  --fonts-monospace: Iosevka Nerd Font, FiraCode Nerd Font, NotoMono Nerd Font;
+  --fonts-default: var(--fonts-monospace);
+
   --header-primary: {foreground};
   --header-secondary: {color7};
   --text-normal: {foreground};
@@ -25,6 +28,11 @@
   --radio-group-dot-foreground: {color6};
   --channeltextarea-background: {foreground};
   --textbox-markdown-syntax: {color6};
+}}
+
+/* Apply Fonts */
+body.powercord, * {{
+    font-family: var(--fonts-default);
 }}
 
 /* Message Textarea */
