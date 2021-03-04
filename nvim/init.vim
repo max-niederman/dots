@@ -86,6 +86,7 @@ let g:coc_global_extensions = [
             \ 'coc-json',
             \ 'coc-yaml',
             \ 'coc-vimtex',
+            \ 'coc-discord-rpc'
             \ ]
 
 nmap <silent> <leader>a :CocAction<CR>
