@@ -20,13 +20,13 @@ Plug 'Xuyuanp/nerdtree-git-plugin' " NERDTree Git integration
 Plug 'ryanoasis/vim-devicons' " File/folder icons in NERDTree
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight' " NERDTree color highlights
 Plug 'editorconfig/editorconfig-vim' " Respect editorconfig settings
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } " Fuzzy find files
+Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary' } " Fuzzy find things
 Plug 'kassio/neoterm' " Integrated terminal wrapper
 Plug 'vim-test/vim-test' " Test runner
 Plug 'scrooloose/nerdcommenter' " Easy commenting
 Plug 'easymotion/vim-easymotion' " Easier repeated motions
 Plug 'jiangmiao/auto-pairs' " Automatically insert bracket pairs
-Plug 'tpope/vim-surround' " Surround selections with characters
+Plug 'machakann/vim-sandwich' " Surround selections with characters
 
 " Integrations
 Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } } " Firefox neovim client
@@ -125,8 +125,10 @@ let g:NERDTreeIgnore = ['^.git$', '^.vscode$', '^__pycache__$']
 nmap <silent> <C-k> :NERDTreeToggle<CR>
 nmap <silent> <leader>r :NERDTreeRefresh<CR>
 
-" FZF
-nmap <silent> <leader>f :FZF<CR>
+" Clap
+let g:clap_theme = 'nord'
+
+nmap <silent> <leader>f :Clap<CR>
 
 " Vim-test
 nmap <silent> <leader>tn :TestNearest<CR>
@@ -168,7 +170,7 @@ au FileType htmldjango inoremap {# {#  #}<left><left><left>
 au FileType markdown setlocal shiftwidth=2 tabstop=2 softtabstop=2
 au FileType journal setlocal shiftwidth=2 tabstop=2 softtabstop=2
 
-"" JavaScript and TypeScript
+" JavaScript and TypeScript
 au FileType javascript setlocal shiftwidth=2 tabstop=2 softtabstop=2
 au FileType javascriptreact setlocal shiftwidth=2 tabstop=2 softtabstop=2
 au FileType typescript setlocal shiftwidth=2 tabstop=2 softtabstop=2
