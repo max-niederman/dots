@@ -10,8 +10,8 @@ $HOME/.config/dunst/start.sh &
 $HOME/.config/polybar/launch.sh &
 
 # Assign displays
-bspc monitor DisplayPort-2 -d		I III V
-bspc monitor HDMI-A-0 -d		    II IV VI
+bspc monitor DisplayPort-2 -d		I II III IV
+bspc monitor HDMI-A-0 -d		    V VI VII IX
 
 # Source wal colors
 . "${HOME}/.cache/wal/colors.sh"
