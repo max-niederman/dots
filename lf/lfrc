@@ -1,5 +1,5 @@
 # interpreter for shell commands (needs to be POSIX compatible)
-set shell sh
+set shell bash
 
 # set '-eu' options for shell commands
 # These options are used to have safer shell commands. Option '-e' is used to
@@ -97,9 +97,3 @@ cmd zip ${{
     zip -r $1.zip $1
     rm -rf $1
 }}
-
-# image preview
-set previewer stpv
-set cleaner stpvimgclr
-
-&stpvimg --listen $$
