@@ -10,6 +10,7 @@ $HOME/.config/dunst/start.sh &
 $HOME/.config/polybar/launch.sh &
 
 # Assign displays
+## Personally, I organize windows according to pairs of displays in the order project1, project2, entertainment, school.
 bspc monitor DisplayPort-2 -d		I II III IV
 bspc monitor HDMI-A-0 -d		    V VI VII IX
 
@@ -29,6 +30,6 @@ bspc config focused_border_color "$color15"
 bspc config presel_feedback_color "$color1"
 
 # Window rules
-bspc rule -a discord desktop=^5
+bspc rule -a discord desktop=^7
 bspc rule -a Zathura state=tiled
 bspc rule -a Picture-in-Picture state=floating
