@@ -5,6 +5,7 @@ set searchengine duckduckgo
 
 " Theme
 set theme base16-wal
+command recolor composite colourscheme default; colurscheme base16-wal
 
 " DuckDuckGo
 bindurl duckduckgo.com f hint -Jc [class=result__a]
