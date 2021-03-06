@@ -1,4 +1,5 @@
 {
+    "python.venvPath": "~/.local/share/virtualenvs",
     "suggest.noselect": false,
     "rpc.enabled": false
 }

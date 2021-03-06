@@ -6,6 +6,7 @@ call plug#begin(stdpath('data') . '/plugged')
 " Language
 Plug 'sheerun/vim-polyglot' " Language integration pack
 Plug 'neoclide/coc.nvim', {'branch': 'release'} " Completions engine
+Plug 'liuchengxu/vista.vim' " LSP symbol viewer
 Plug 'lervag/vimtex' " LaTeX suport
 Plug 'scrooloose/syntastic' " Syntax checking
 Plug 'sbdchd/neoformat' "Syntax formatting
@@ -85,11 +86,17 @@ let g:coc_global_extensions = [
             \ 'coc-css',
             \ 'coc-json',
             \ 'coc-yaml',
+            \ 'coc-docker',
             \ 'coc-vimtex',
             \ 'coc-discord-rpc'
             \ ]
 
 nmap <silent> <leader>a :CocAction<CR>
+
+" Vista
+let g:vista_default_executive = 'coc'
+
+nmap <silent> <C-l> :Vista!!<CR>
 
 " Vimtex
 let g:vimtex_view_automatic = 1
