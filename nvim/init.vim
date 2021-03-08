@@ -157,9 +157,12 @@ let g:firenvim_config = {
 " Goyo
 nmap <silent> <leader>g :Goyo<CR>
 
-" Limelight
-au! User GoyoEnter Limelight
-au! User GoyoLeave Limelight!
+augroup FocusedEditing
+    au!
+    au User GoyoEnter Limelight
+    au User GoyoLeave Limelight!
+    au User GoyoEnter,GoyoLeave SyntasticToggleMode
+augroup END
 
 """ Filetype-Specific Configurations
 
