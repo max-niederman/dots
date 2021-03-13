@@ -21,7 +21,7 @@ Plug 'Xuyuanp/nerdtree-git-plugin' " NERDTree Git integration
 Plug 'ryanoasis/vim-devicons' " File/folder icons in NERDTree
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight' " NERDTree color highlights
 Plug 'editorconfig/editorconfig-vim' " Respect editorconfig settings
-Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary' } " Fuzzy find things
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } " Fuzzy find files
 Plug 'kassio/neoterm' " Integrated terminal wrapper
 Plug 'vim-test/vim-test' " Test runner
 Plug 'scrooloose/nerdcommenter' " Easy commenting
@@ -132,10 +132,8 @@ let g:NERDTreeIgnore = ['^.git$', '^.vscode$', '^__pycache__$']
 nmap <silent> <C-k> :NERDTreeToggle<CR>
 nmap <silent> <leader>r :NERDTreeRefresh<CR>
 
-" Clap
-let g:clap_theme = 'nord'
-
-nmap <silent> <leader>f :Clap<CR>
+" FZF
+nmap <silent> <leader>f :FZF<CR>
 
 " Vim-test
 nmap <silent> <leader>tn :TestNearest<CR>
