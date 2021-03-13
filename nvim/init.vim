@@ -118,7 +118,7 @@ let g:neoformat_basic_format_align = 1
 let g:neoformat_basic_format_trim = 1
 let g:neoformat_only_msg_on_error = 1
 
-augroup neoformat
+augroup Neoformat
     au!
     "au BufWritePre *.{js,ts,jsx,tsx} Neoformat
     "au BufWritePre *.{html,svelte} Neoformat
@@ -188,11 +188,14 @@ au FileType json setlocal shiftwidth=2 tabstop=2 softtabstop=2
 " Firebase Rules
 au BufCreate *.rules setlocal shiftwidth=2 tabstop=2 softtabstop=2
 
-""" Mappings, Autocommands, and Functions
+""" Mappings, Autocommands, Functions, and Commands
 
 " Clipboard
 vmap <C-c> "+y
 vmap <C-v> "+p
+
+" Terminal
+tmap <silent> <leader><ESC> <C-\><C-n>
 
 " Use tab to trigger completion with characters ahead and navigate
 inoremap <silent><expr> <TAB>
@@ -238,38 +241,3 @@ nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
-
-""" Session Initialization
-
-function! s:InitSession()
-    " Open the terminal window
-    new
-    wincmd J
-    resize 15
-    Topen
-    T clear
-
-    " Open NERDTree
-    NERDTree
-
-    " Focus the primary window if a file was provided
-    if argc()
-        wincmd l
-    endif
-endfunction
-
-" Get a list of parent processes
-let s:parent_proc = split(system(join(['pstree -sA ',  getpid()])), '---')
-
-if count(s:parent_proc, 'neovide') > 0
-    " Neovide
-    " Most GUI-specific options are set in ginit.vim
-
-    " Running immediately after VimEnter prevents the terminal window from being resized for some reason
-    au VimEnter * call s:InitSession()
-elseif count(s:parent_proc, 'firefox') > 0
-    " Firenvim
-else 
-    " All other parents, i.e. terminal emulators
-    au VimEnter * call s:InitSession()
-endif
