@@ -1,5 +1,10 @@
+package archlinux
 package asdf
-package https://github.com/dracula/fish
+package colorman
+package fuck
+package fzf
+package https://github.com/brgmnn/fish-docker-compose
 package https://github.com/jethrokuan/z
+package neovim
 package pisces
 theme default
