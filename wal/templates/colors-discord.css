@@ -36,8 +36,13 @@ body.powercord, * {{
 }}
 
 /* Message Textarea */
-.slateTextArea-1Mkdgw {{
-    color: {background};
+.channelTextArea-rNsIhG {{
+    border: 2px solid {foreground};
+}}
+
+.channelTextArea-rNsIhG * {{
+    background-color: {background};
+    color: {foreground};
 }}
 
 /* Replies */
@@ -56,7 +61,7 @@ body.powercord, * {{
 }}
 
 .channelTextArea-rNsIhG .button-38aScr {{
-    --interactive-normal: {background};
-    --interactive-hover: {color6};
-    --interactive-active: {color6};
+    --interactive-normal: {color6};
+    --interactive-hover: {color5};
+    --interactive-active: {color5};
 }}
