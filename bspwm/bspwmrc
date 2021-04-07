@@ -1,13 +1,23 @@
 #! /bin/sh
 
+### Background Processes ###
+
+# Start picom
+pgrep -x picom > /dev/null || picom -b
+
 # Start sxhkd
 pgrep -x sxhkd > /dev/null || sxhkd &
+
+# Start fcitx5
+fcitx5 -rd &
 
 # Start dunst
 $HOME/.config/dunst/start.sh &
 
 # Start polybar
 $HOME/.config/polybar/launch.sh &
+
+### BSPWM Config ###
 
 # Assign displays
 ## Personally, I organize windows according to pairs of displays in the order project1, project2, entertainment, school.

@@ -39,5 +39,4 @@ wal -R
 
 discord-canary &
 
-picom -b &
 exec bspwm
