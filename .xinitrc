@@ -23,9 +23,6 @@ if [ -f "$usermodmap" ]; then
     xmodmap "$usermodmap"
 fi
 
-# lower mouse sensitivity
-xinput set-prop "Glorious Model O Wireless" "Coordinate Transformation Matrix" 0.35 0 0 0 0.35 0 0 0 1
-
 # start programs
 
 if [ -d /etc/X11/xinit/xinitrc.d ] ; then
