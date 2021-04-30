@@ -4,14 +4,14 @@ piactl monitor connectionstate | while read -r state
 do
     case $state in
         "Connected")
-            echo " Up"
+            echo " Up"
             ;;
 
         "Disconnected")
-            echo " Down"
+            echo " Down"
             ;;
 
         *)
-            echo " $state"
+            echo " $state"
     esac
 done
