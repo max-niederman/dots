@@ -2,7 +2,7 @@ configuration {
 	font:							"Iosevka Nerd Font 12";
     show-icons:                     true;
 	icon-theme: 					"Papirus";
-    display-drun: 					"";
+    display-drun: 					"";
     drun-display-format:            "{name}";
     disable-history:                false;
     fullscreen:                     false;
@@ -35,7 +35,7 @@ textbox-prompt-colon {
 	text-color: 					@bar;
 	expand: false;
 	str: "";
-	font:							"feather 12";
+	font:							"icomoon-feather 12";
 }
 
 entry {
