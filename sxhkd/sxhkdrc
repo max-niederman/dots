@@ -2,9 +2,20 @@
 # wm independent hotkeys
 #
 
+# dunst context
+super + i
+    dunstctl context
+
 # terminal emulator
 super + Return
 	kitty
+
+# web browser
+super + u
+    bash -c "firefox --new-window"
+
+super + alt + u
+    bash -c "firefox --private-window"
 
 # program launcher
 super + @space
@@ -27,7 +38,7 @@ Print
     flameshot gui
 
 # make sxhkd reload its configuration files:
-super + Escape
+super + alt + Escape
 	pkill -USR1 -x sxhkd
 
 #
