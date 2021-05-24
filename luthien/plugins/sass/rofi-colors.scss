@@ -1,0 +1,18 @@
+@use "sass:list";
+@use "sass:color";
+
+@use "luthien";
+
+// Map a color into the #RRGGBBAA format Rofi expects.
+@function rasi-color($col) {
+    @return color.ie-hex-str(rgba(green($col), blue($col), alpha($col) * 256, red($col) / 256));
+}
+
+* {
+    al: rasi-color(rgba(0, 0, 0, 0));
+    bg: rasi-color(luthien.$background);
+    bga: rasi-color(color.change(list.nth(luthien.$accents, 2), $alpha: 0.2));
+    bar: rasi-color(luthien.$foreground);
+    fg: rasi-color(luthien.$foreground);
+    ac: rasi-color(list.nth(luthien.$accents, 2));
+}

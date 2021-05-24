@@ -1,5 +1,8 @@
 #! /usr/bin/bash
 
+# Load secrets
+source ~/.secret.profile
+
 # Use qt5ct for QT theme
 export QT_QPA_PLATFORMTHEME="qt5ct"
 

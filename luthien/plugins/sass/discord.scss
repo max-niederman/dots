@@ -1,0 +1,62 @@
+@use "sass:list";
+@use "sass:map";
+
+@use "luthien";
+
+:root {
+  --fonts-monospace: Iosevka Nerd Font, FiraCode Nerd Font, NotoMono Nerd Font;
+  --fonts-default: var(--fonts-monospace);
+
+  --header-primary: luthien.$foreground;
+  --header-secondary: list.nth(luthien.$accents, 1);
+  --text-normal: luthien.$foreground;
+  --text-muted: list.nth(luthien.$accents, 6);
+  --text-link: map.get(luthien.$palette, cyan);
+  --channels-default: map.get(luthien.$palette, cyan);
+  --interactive-normal: list.nth(luthien.$accents, 2);
+  --interactive-hover: luthien.$foreground;
+  --interactive-active: list.nth(luthien.$accents, 2);
+  --interactive-muted: list.nth(luthien.$accents, 6);
+  --background-primary: luthien.$background;
+  --background-secondary: var(--background-primary);
+  --background-secondary-alt: var(--background-secondary);
+  --background-tertiary: var(--background-primary);
+  --background-accent: var(--background-primary);
+  --background-floating: var(--background-primary);
+  --activity-card-background: var(--background-primary);
+  --scrollbar-thin-thumb: list.nth(luthien.$accents, 2);
+  --scrollbar-thin-track: transparent;
+  --scrollbar-auto-thumb: list.nth(luthien.$accents, 2);
+  --scrollbar-auto-track: transparent;
+  --logo-primary: list.nth(luthien.$accents, 1);
+  --focus-primary: list.nth(luthien.$accents, 3);
+  --radio-group-dot-foreground: list.nth(luthien.$accents, 2);
+  --channeltextarea-background: luthien.$background;
+  --textbox-markdown-syntax: list.nth(luthien.$accents, 3);
+}
+
+// Apply Fonts
+body.powercord,
+* {
+  font-family: var(--fonts-default);
+}
+
+// Message Textarea
+.channelTextArea-rNsIhG {
+  border: 2px solid var(--text-normal);
+}
+
+// Replies
+.repliedMessage-VokQwo {
+  --background-accent: list.nth(luthien.$accents, 3);
+}
+
+// Friends List
+.peopleColumn-29fq28 {
+  background-color: var(--background-primary);
+}
+
+// New Message Seperator
+.isUnread-3Ef-o9 {
+  border-color: list.nth(luthien.$accents, 3);
+}

@@ -1,0 +1,16 @@
+[[plugins]]
+executable = "~/.cargo/bin/luthien-terminal"
+
+[[plugins]]
+executable = "~/.cargo/bin/luthien-templates"
+
+[[plugins]]
+executable = "~/.cargo/bin/luthien-sass"
+
+[[plugins]]
+executable = "scripts/wallpaper.fish"
+
+[[plugins]]
+name = "bspwm"
+executable = "/usr/bin/bspc"
+args = ["wm", "-r"]
