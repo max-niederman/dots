@@ -1,1 +1,1 @@
-set EDITOR /usr/bin/nvim
+export EDITOR=/usr/bin/nvim

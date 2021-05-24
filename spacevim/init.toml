@@ -1,0 +1,117 @@
+[options]
+  automatic_update = true
+
+  bootstrap_before = "spacevim#before"
+  bootstrap_after = "spacevim#after"
+
+  colorscheme = "default"
+  colorscheme_bg = "dark"
+  enable_guicolors = true
+
+  statusline_separator = "arrow"
+  statusline_iseparator = "arrow"
+  buffer_index_type = 4
+  enable_tabline_filetype_icon = true
+  enable_statusline_mode = false
+
+# VCS
+
+[[layers]]
+  name = "VersionControl"
+
+[[layers]]
+  name = "git"
+
+[[layers]]
+  name = "github"
+
+# Language
+
+[[layers]]
+  name = "autocomplete"
+  auto_completion_return_key_behavior = "complete"
+  auto_completion_tab_key_behavior = "smart"
+
+[[layers]]
+  name = "lsp"
+  filetypes = [
+    "c",
+    "cpp",
+    "css",
+    "haskell",
+    "html",
+    "javascript",
+    "python",
+    "rust",
+    "sh",
+    "typescript"
+  ]
+  [layers.override_cmd]
+    html = ["vscode-html-language-server"]
+    haskell = ["haskell-language-server-wrapper"]
+
+[[layers]]
+  name = "lang#c"
+
+[[layers]]
+  name = "lang#dockerfile"
+
+[[layers]]
+  name = "lang#graphql"
+
+[[layers]]
+  name = "lang#haskell"
+
+[[layers]]
+  name = "lang#html"
+
+[[layers]]
+  name = "lang#javascript"
+
+[[layers]]
+  name = "lang#latex"
+
+[[layers]]
+  name = "lang#markdown"
+
+[[layers]]
+  name = "lang#python"
+
+[[layers]]
+  name = "lang#rust"
+
+[[layers]]
+  name = "lang#sh"
+
+[[layers]]
+  name = "lang#toml"
+
+[[layers]]
+  name = "lang#typescript"
+
+[[layers]]
+  name = "lang#vim"
+
+[[layers]]
+  name = "lang#extra"
+
+# Utilities
+
+[[layers]]
+  name = "test"
+
+[[layers]]
+  name = "denite"
+
+[[layers]]
+  name = "shell"
+  default_position = "top"
+  default_height = 30
+
+[[layers]]
+  name = "sudo"
+
+# Aesthetic
+
+[[custom_plugins]]
+  repo = "ryanoasis/vim-devicons"
