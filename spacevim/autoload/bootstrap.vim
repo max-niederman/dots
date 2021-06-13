@@ -1,9 +1,11 @@
-func! spacevim#before() abort
+function! bootstrap#before() abort
   set timeoutlen=500
+
+  let g:vimfiler_ignore_pattern = ["^\.git$"]
 
   let g:github_dashboard = { 'username': 'max-niederman', 'password': $GITHUB_TOKEN }
   let g:gista#client#default_username = 'max-niederman'
-endf
+endfunction
 
-func! spacevim#after() abort
-endf
+function bootstrap#after() abort
+endfunction

@@ -1,10 +1,14 @@
 [options]
   automatic_update = true
 
-  bootstrap_before = "spacevim#before"
-  bootstrap_after = "spacevim#after"
+  bootstrap_before = "bootstrap#before"
+  bootstrap_after = "bootstrap#after"
 
-  colorscheme = "default"
+  project_rooter_automatically = false
+
+  filemanager = "nerdtree"
+
+  colorscheme = "gruvbox"
   colorscheme_bg = "dark"
   enable_guicolors = true
 
@@ -47,8 +51,9 @@
     "typescript"
   ]
   [layers.override_cmd]
-    html = ["vscode-html-language-server"]
     haskell = ["haskell-language-server-wrapper"]
+    html = ["vscode-html-language-server"]
+    rust = ["rls"]
 
 [[layers]]
   name = "lang#c"
@@ -110,6 +115,9 @@
 
 [[layers]]
   name = "sudo"
+
+[[custom_plugins]]
+  name = "wakatime/vim-wakatime"
 
 # Aesthetic
 
