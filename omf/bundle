@@ -4,6 +4,7 @@ package colorman
 package fuck
 package fzf
 package https://github.com/brgmnn/fish-docker-compose
+package https://github.com/danhper/fish-ssh-agent
 package https://github.com/jethrokuan/z
 package neovim
 package pisces
