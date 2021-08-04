@@ -1,21 +1,21 @@
-:root {{
+:root {
     /* Based on Shydactyl */
-    --base00: {color0};
-    --base01: {color1};
-    --base02: {color2};
-    --base03: {color3};
-    --base04: {color4};
-    --base05: {color5};
-    --base06: {color6};
-    --base07: {color7};
-    --base08: {color8};
-    --base09: {color9};
-    --base0A: {color10};
-    --base0B: {color11};
-    --base0C: {color12};
-    --base0D: {color13};
-    --base0E: {color14};
-    --base0F: {color15};
+    --base00: var(--luthien-background);
+    --base01: var(--luthien-accent0);
+    --base02: var(--luthien-accent1);
+    --base03: var(--luthien-accent2);
+    --base04: var(--luthien-accent3);
+    --base05: var(--luthien-accent4);
+    --base06: var(--luthien-accent5);
+    --base07: var(--luthien-foreground);
+    --base08: var(--luthien-background);
+    --base09: var(--luthien-accent0);
+    --base0A: var(--luthien-accent1);
+    --base0B: var(--luthien-accent2);
+    --base0C: var(--luthien-accent3);
+    --base0D: var(--luthien-accent4);
+    --base0E: var(--luthien-accent5);
+    --base0F: var(--luthien-foreground);
 
     --tridactyl-fg: var(--base05);
     --tridactyl-bg: var(--base00);
@@ -34,15 +34,15 @@
     --tridactyl-hint-active-outline: none;
     --tridactyl-hint-bg: none;
     --tridactyl-hint-outline: none;
-}}
+}
 
-#command-line-holder {{
+#command-line-holder {
     order: 1;
     border: 2px solid var(--base0B);
     color: var(--tridactyl-bg);
-}}
+}
 
-#tridactyl-input {{
+#tridactyl-input {
     padding: 1rem;
     color: var(--tridactyl-fg);
     width: 90%;
@@ -51,9 +51,9 @@
     background: var(--tridactyl-bg);
     padding-left: unset;
     padding: 1rem;
-}}
+}
 
-#completions table {{
+#completions table {
     font-size: 0.8rem;
     font-weight: 200;
     border-spacing: 0;
@@ -61,16 +61,16 @@
     padding: 1rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
-}}
+}
 
-#completions > div {{
+#completions > div {
     max-height: calc(20 * var(--option-height));
     min-height: calc(10 * var(--option-height));
-}}
+}
 
 /* COMPLETIONS */
 
-#completions {{
+#completions {
     --option-height: 1.4em;
     color: var(--tridactyl-fg);
     background: var(--tridactyl-bg);
@@ -81,58 +81,58 @@
     width: 100%;
     border-top: unset;
     order: 2;
-}}
+}
 
 /* Olie doesn't know how CSS inheritance works */
-#completions .HistoryCompletionSource {{
+#completions .HistoryCompletionSource {
     max-height: unset;
     min-height: unset;
-}}
+}
 
-#completions .HistoryCompletionSource table {{
+#completions .HistoryCompletionSource table {
     width: 100%;
     font-size: 9pt;
     border-spacing: 0;
     table-layout: fixed;
-}}
+}
 
 /* redundancy 2: redundancy 2: more redundancy */
-#completions .BmarkCompletionSource {{
+#completions .BmarkCompletionSource {
     max-height: unset;
     min-height: unset;
-}}
+}
 
-#completions table tr td.prefix,#completions table tr td.privatewindow,#completions table tr td.container,#completions table tr td.icon {{
+#completions table tr td.prefix,#completions table tr td.privatewindow,#completions table tr td.container,#completions table tr td.icon {
     display: none;
-}}
+}
 
-#completions .BufferCompletionSource table {{
+#completions .BufferCompletionSource table {
     width: unset;
     font-size: unset;
     border-spacing: unset;
     table-layout: unset;
-}}
+}
 
-#completions table tr .title {{
+#completions table tr .title {
         width: 50%;
-}}
+}
 
-#completions table tr {{
+#completions table tr {
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
-}}
+}
 
-#completions .sectionHeader {{
+#completions .sectionHeader {
         background: unset;
         font-weight: 200;
         border-bottom: unset;
         padding: 1rem !important;
         padding-left: unset;
         padding-bottom: 0.2rem;
-}}
+}
 
-#cmdline_iframe {{
+#cmdline_iframe {
         position: fixed !important;
         bottom: unset;
         top: 25% !important;
@@ -140,9 +140,9 @@
         z-index: 2147483647 !important;
         width: 80% !important;
         box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 20px !important;
-}}
+}
 
-.TridactylStatusIndicator {{
+.TridactylStatusIndicator {
         position: fixed !important;
         bottom: 0 !important;
         background: var(--tridactyl-bg) !important;
@@ -151,21 +151,14 @@
         font-size: 12pt !important;
         /*font-weight: 200 !important;*/
         padding: 0.8ex !important;
-}}
+}
 
-#completions .focused {{
+#completions .focused {
         background: var(--base0B);
         color: var(--base00);
-}}
+}
 
-#completions .focused .url {{
+#completions .focused .url {
         background: var(--base0B);
         color: var(--base00);
-}}
-/* #Ocean-normal {{ */
-/*  border-color: green !important; */
-/* }} */
-
-/* #Ocean-insert {{ */
-/*  border-color: yellow !important; */
-/* }} */
+}

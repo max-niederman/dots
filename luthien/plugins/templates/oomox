@@ -1,0 +1,19 @@
+NAME=wal
+THEME_STYLE=materia
+ICONS_STYLE=papirus_icons
+GTK3_GENERATE_DARK=True
+BG={{ colors.background | hex(prefix="") }}
+FG={{ colors.foreground | hex(prefix="") }}
+MENU_BG={{ colors.background | hex(prefix="") }}
+MENU_FG={{ colors.foreground | hex(prefix="") }}
+SEL_BG={{ colors.accents.0 | hex(prefix="") }}
+SEL_FG={{ colors.foreground | hex(prefix="") }}
+TXT_BG={{ colors.background | hex(prefix="") }}
+TXT_FG={{ colors.foreground | hex(prefix="") }}
+BTN_BG={{ colors.accents.1 | hex(prefix="") }}
+BTN_FG={{ colors.foreground | hex(prefix="") }}
+HDR_BTN_BG={{ colors.accents.2 | hex(prefix="") }}
+HDR_BTN_FG={{ colors.foreground | hex(prefix="") }}
+ROUNDNESS=0
+SPACING=3
+GRADIENT=0.0

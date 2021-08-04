@@ -1,0 +1,48 @@
+{
+  "theme": {
+    "colors": {
+      "frame": "{{ colors.background | hex }}",
+      "tab_text": "{{ colors.foreground | hex }}",
+      "tab_line": "{{ colors.accents.1 | hex }}",
+      "tab_loading": "{{ colors.palette.red | hex }}",
+      "tab_background_text": "{{ colors.foreground | hex }}",
+      "tab_selected": "{{ colors.background | hex }}",
+      "toolbar": "{{ colors.background | adjust(lighten=0.05) | hex }}",
+      "toolbar_field": "{{ colors.background | hex }}",
+      "toolbar_field_border": "{{ colors.accents.1 | hex }}",
+      "toolbar_field_text": "{{ colors.foreground | hex }}",
+      "toolbar_top_separator": "{{ colors.background | adjust(darken=0.5) | hex }}",
+      "toolbar_bottom_separator": "{{ colors.background | adjust(dark=0.5) | hex }}",
+      "ntp_background": "{{ colors.background | hex }}",
+      "ntp_text": "{{ colors.foreground | hex }}",
+      "popup": "{{ colors.background | hex }}",
+      "popup_border": "{{ colors.accents.1 | hex }}",
+      "popup_text": "{{ colors.foreground | hex }}",
+      "popup_highlight": "{{ colors.accents.0 | hex }}",
+      "sidebar": "{{ colors.background | hex }}",
+      "sidebar_text": "{{ colors.foreground | hex }}",
+      "sidebar_highlight_text": "{{ colors.accents.0 | hex }}",
+      "sidebar_border": "{{ colors.accents.1 | hex }}"
+    }
+  },
+  "variables": {
+    "--luthien-black": "{{ colors.palette.black | hex }}",
+    "--luthien-red": "{{ colors.palette.red | hex }}",
+    "--luthien-green": "{{ colors.palette.green | hex }}",
+    "--luthien-yellow": "{{ colors.palette.yellow | hex }}",
+    "--luthien-blue": "{{ colors.palette.blue | hex }}",
+    "--luthien-purple": "{{ colors.palette.purple | hex }}",
+    "--luthien-cyan": "{{ colors.palette.cyan | hex }}",
+    "--luthien-white": "{{ colors.palette.white | hex }}",
+
+    "--luthien-background": "{{ colors.background | hex }}",
+    "--luthien-foreground": "{{ colors.foreground | hex }}",
+
+    "--luthien-accent0": "{{ colors.accents.0 | hex }}",
+    "--luthien-accent1": "{{ colors.accents.1 | hex }}",
+    "--luthien-accent2": "{{ colors.accents.2 | hex }}",
+    "--luthien-accent3": "{{ colors.accents.3 | hex }}",
+    "--luthien-accent4": "{{ colors.accents.4 | hex }}",
+    "--luthien-accent5": "{{ colors.accents.5 | hex }}"
+  }
+}

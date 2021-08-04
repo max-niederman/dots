@@ -2,10 +2,11 @@
 set configversion 2.0
 set newtab about:newtab
 set searchengine duckduckgo
+set modeindicatormodes {"normal":"false","insert":"true","input":"true","ignore":"true","ex":"true","hint":"true","visual":"true"}
 
 " Theme
-set theme base16-wal
-command recolor composite colourscheme default; colourscheme base16-wal
+set theme base16-luthien
+command recolor composite colourscheme default; colourscheme base16-luthien
 
 " DuckDuckGo
 bindurl duckduckgo.com f hint -Jc [class=result__a]
@@ -15,4 +16,4 @@ bindurl duckduckgo.com F hint -Jbc [class=result__a]
 bindurl google.com f hint -Jc #search div:not(.action-menu) > a
 bindurl google.com F hint -Jbc #search div:not(.action-menu) > a
 
-vim: set filetype=tridactyl
+" vim: set filetype=tridactyl :
