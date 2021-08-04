@@ -4,34 +4,38 @@
 
 # dunst context
 super + i
-    dunstctl context
+  dunstctl context
 
 # terminal emulator
 super + Return
-	kitty
+  alacritty
 
 # web browser
 super + u
-    bash -c "firefox --new-window"
+  bash -c "firefox --new-window"
 
 super + alt + u
-    bash -c "firefox --private-window"
+  bash -c "firefox --private-window"
 
 # program launcher
 super + @space
-	$HOME/.config/rofi/scripts/launcher.sh
+  $HOME/.config/rofi/scripts/launcher.sh
 
 # alternate program launcher
 super + alt + @space
-    rofi -show drun
+  rofi -show drun
 
 # window switcher
 alt + Tab
-    rofi -show window
+  rofi -show window
+
+# system tray
+super + t
+  stalonetray --window-type normal
 
 # emoji selector
 super + p
-    rofi -show emoji
+  rofi -show emoji
 
 # take a screenshot
 Print
