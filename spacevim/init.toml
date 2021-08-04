@@ -4,8 +4,9 @@
   bootstrap_before = "bootstrap#before"
   bootstrap_after = "bootstrap#after"
 
-  project_rooter_automatically = false
+  lint_engine = "ale"
 
+  project_rooter_automatically = false
   filemanager = "nerdtree"
 
   colorscheme = "gruvbox"
@@ -33,27 +34,38 @@
 
 [[layers]]
   name = "autocomplete"
-  auto_completion_return_key_behavior = "complete"
+  auto_completion_return_key_behavior = "smart"
   auto_completion_tab_key_behavior = "smart"
 
 [[layers]]
   name = "lsp"
   filetypes = [
+    "astro",
     "c",
     "cpp",
     "css",
     "haskell",
     "html",
     "javascript",
+    "json",
     "python",
     "rust",
+    "sass",
+    "scss",
     "sh",
+    "svelte",
     "typescript"
   ]
   [layers.override_cmd]
+    astro = ["astro-ls"]
+    css = ["vscode-css-language-server"]
     haskell = ["haskell-language-server-wrapper"]
     html = ["vscode-html-language-server"]
+    json = ["vscode-json-language-server"]
     rust = ["rls"]
+    sass = ["vscode-css-language-server"]
+    scss = ["vscode-css-language-server"]
+    svelte = ["svelteserver"]
 
 [[layers]]
   name = "lang#c"
@@ -88,6 +100,9 @@
 [[layers]]
   name = "lang#sh"
 
+[[custom_plugins]]
+  repo = "evanleck/vim-svelte"
+
 [[layers]]
   name = "lang#toml"
 
@@ -110,8 +125,7 @@
 
 [[layers]]
   name = "shell"
-  default_position = "top"
-  default_height = 30
+  default_position = "left"
 
 [[layers]]
   name = "sudo"
