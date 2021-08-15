@@ -62,7 +62,7 @@
     haskell = ["haskell-language-server-wrapper"]
     html = ["vscode-html-language-server"]
     json = ["vscode-json-language-server"]
-    rust = ["rls"]
+    rust = ["rust-analyzer"]
     sass = ["vscode-css-language-server"]
     scss = ["vscode-css-language-server"]
     svelte = ["svelteserver"]
